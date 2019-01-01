@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Réservation</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/datePicker.css" type="text/css"> 
+  
+
+</head>
+
+<body>
+<div id="booking" class="section">
+        <div class="section-center">
+          <div class="container">
+            <div class="row">
+              <div class="booking-form">
+                <div class="form-header"> </div>
+                   <form id="form1" name="form1" method="post" action=""><br /><br />  <br /><br /><br /><br />  <br /><br />
+                     <h1>Commandez votre table </h1>
+                        <p class="h5">Ce formulaire permet de commander une table dans notre restaurant, ensuite vous pouvez commande vos plats. Il faudra aussi indiquer vos coordonn&eacute;es et dans le cas de plusieurs personne, indiquer le nom de chacun d'entre eux.</p>
+                         <h3>Table pour combien de personnes ?</h3> <br>
+            
+            <select class="form-control" name="nbp" id="nbp">
+                 <option value="-1">--Veuillez choisir---</option>
+                 <option value="1">Une place</option>
+                 <option value="2">Deux places</option>
+                 <option value="4">4 places</option>
+              <option value="6">6 places</option>
+            </select> <br />
+           <div id="chaises"></div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <span class="form-label">Choisir date</span>
+                        <input name="date" type="text" id="date" value=""class="form-control" />
+                    </div>
+                </div>
+            </div>
+           <h3>Vos coordonées	</h3>
+           <div class="form-btn">  
+                <span class="form-label">Civilit&eacute;:</span>
+                <input  name="civilite" type="radio" value="mme" />
+                <h5>Madame </h5>
+                <input name="civilite" type="radio" value="mlle" />
+                <h5>Mademoiselle </h5>
+                <input name="civilite" type="radio" value="m" />
+                <h5>Monsieur </h5>
+            </div><br />
+    <div class="row">						   
+    <div class="col-sm-6">
+      <div class="form-group">
+        <span class="form-label">Nom et Prénom</span>
+        <input name="nom" id="nom" class="form-control" type="text" placeholder="Entrez votre nom" size="60">
+    </div>
+   <div class="form-group">
+          <span class="form-label">N° de téléphone</span>
+          <input name="tel" class="form-control" type="tel" placeholder="Entrez votre N° de téléphone" id="tel">
+   </div>
+   <div class="form-group">
+            <span id="div_accompagnateurs" class="form-label">Liste des accompagnateurs (une personne par ligne):</span>
+                <textarea  class="form-control"rows="4" cols="50" name="comment" form="usrform" placeholder="Entrez les accompagnateurs"></textarea> 									</span>
+          </div>
+
+    </div></div>        
+        <hr />
+          <h3>Que voulez-vous manger ?  </h3>
+          <div class="col-sm-4">
+          <div class="form-group">				
+                <p class="h5">Entrée </p>
+        
+                                     <label> 
+					                	<input name="cmd" type="checkbox" value="SALADE NIÇOISE" data-prix="7" checked="checked"/>
+					                   	SALADE NIÇOISE
+					                </label><br />      
+        
+   		
+									<label>
+									<input name="cmd" type="checkbox" value="SALADE DE RIZ" data-prix="12" />
+									SALADE DE RIZ </label>
+									<br />
+									
+									<label>
+									<input name="cmd" type="checkbox" value="CHORBA TUNISIENNE" data-prix="9" />
+									CHORBA TUNISIENNE</label>
+									<br />
+
+									<label>
+									<input name="cmd" type="checkbox" value="SOUPE À L'OIGNON" data-prix="8" />
+									SOUPE À L'OIGNON</label>
+									<br />
+
+									<label>
+									<input name="cmd" type="checkbox" value="SALADE CAESAR" data-prix="12" />
+									SALADE CAESAR </label>
+									<br />
+									<label>
+
+								
+									<input name="cmd" type="checkbox" value="SALADE GRECQUE" data-prix="6.5" />
+									SALADE GRECQUE</label>
+                                    <Br /> 
+                                    <label>
+									<input name="cmd" type="checkbox" value="SOUPE DE POTIMARRON" data-prix="8" />
+									SOUPE DE POTIMARRON</label>
+									<Br /> </label>
+
+							</div>
+							</div>
+
+							<div class="col-sm-4">
+									<div class="form-group">									
+
+							 <p class="h5">Suite </p >
+									<label>
+									<input name="cmd" type="checkbox" value="LASAGNES BOLOGNAISE" data-prix="18" checked="checked"/>
+									LASAGNES BOLOGNAISE</label>
+								
+									<br />	
+									<label>
+									<input name="cmd" type="checkbox" value="PIZZA" data-prix="20" />
+									PIZZA </label>
+									<br />
+									
+									<label>
+									<input name="cmd" type="checkbox" value="COUSCOUS" data-prix="18" />
+									COUSCOUS</label>
+									<br />
+
+									<label>
+									<input name="cmd" type="checkbox" value="VIANDE DE BOEUF" data-prix="30" />
+									VIANDE DE BOEUF</label>
+									<br />
+
+									<label>
+									<input name="cmd" type="checkbox" value="Fruits" data-prix="27" />
+									BROCHETTE DE VIANDE MARIN2E </label>
+									<br />
+									<label>
+
+								
+									<input name="cmd" type="checkbox" value="SPAGHETTI A LA CARBONARA" data-prix="18" />
+									 SPAGHETTI A LA CARBONARA </label>
+									<Br /> 
+							</div>
+							</div>
+
+							<div class="col-sm-4">
+									<div class="form-group">									
+
+							 <p class="h5">Dessert </p >
+									<label>
+									<input name="cmd" type="checkbox" value="MOUSSE AU CHOCOLAT" data-prix="8" checked="checked"/>
+									MOUSSE AU CHOCOLAT</label>
+								
+									<br />	
+									<label>
+									<input name="cmd" type="checkbox" value="FONDANT COEUR CHOCOLAT" data-prix="10" />
+									FONDANT COEUR CHOCOLAT</label>
+									<br />
+									
+									<label>
+									<input name="cmd" type="checkbox" value="VERRINES AUX FRUITS" data-prix="8" />
+									VERRINES AUX FRUITS</label>
+									<br />
+
+									<label>
+									<input name="cmd" type="checkbox" value="CHEESECAKE" data-prix="12" />
+									CHEESECAKE</label>
+									<br />
+
+									<label>
+									<input name="cmd" type="checkbox" value="TIRAMISU AUX FRAMBOISES" data-prix="13" />
+									TIRAMISU AUX FRAMBOISES </label>
+									<br />
+
+									<label>
+
+									<input name="cmd" type="checkbox" value="GATEAUX" data-prix="6.4" />
+									GATEAUX</label>
+									<Br /> 
+									<label>
+
+									<input name="cmd" type="checkbox" value="GAUFRE FRAISE CHANTILLY " data-prix="7" />
+									GAUFRE FRAISE CHANTILLY </label>
+									<Br /> 
+									<label>
+
+									<input name="cmd" type="checkbox" value="PANCKE AU CERISEE" data-prix="8" />
+									PANCKE AU CERISEE</label>
+									<Br /> 	
+							</div>
+							</div>
+
+ <br />
+  <div class="form-btn">
+      <input name="b1" type="button" id="b1" class="submit-btn" value="Valider ma commande">
+      <br />
+      <br />
+  </div>
+  <div class="form-btn">
+  <div id="div_resume">
+    <h3>Afficher le r&eacute;sum&eacute; ici ...</h3>
+  </div>
+  <p>&nbsp;</p>
+</div></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/util.js"></script>
+<script src="js/datePicker.js"></script>
+
+</html>
